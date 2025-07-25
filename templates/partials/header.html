@@ -1,0 +1,15 @@
+  <header class="header">
+  <div class="container container-sm header-flex">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" />
+    <nav class="main-menu">
+      <a href="{{ url_for('home') }}"
+         class="{{ 'current' if request.endpoint=='home' else '' }}">Home</a>
+      <a href="{{ url_for('about') }}"
+         class="{{ 'current' if request.endpoint=='about' else '' }}">About</a>
+      <a href="{{ url_for('contact') }}"
+         class="{{ 'current' if request.endpoint in ['contact','create_message'] else '' }}">Contact</a>
+      <a href="{{ url_for('messages') }}"
+         class="{{ 'current' if request.endpoint in ['messages','edit_message'] else '' }}">Messages</a>
+    </nav>
+  </div>
+</header>

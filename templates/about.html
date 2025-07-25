@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Load jQuery first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- THEN load lightbox.js -->
+    <script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+
+    <!-- Manifest File -->
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+
+    <!-- Fallback Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Web.css') }}">
+    <title>x-Flames creation</title>
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+    <img src="/static/image.jpg" class="zoom">
+  <header class="header">
+
+ </header>
+
+  <section class="hero">
+    <div class="container container-sm">
+      <h2>
+        <span class="bg-primary"> Inspired</span> minds, shaping exceptional
+          projects fueled by <span class="bg-primary">ingenuity</span>
+      </h2>
+    </div>
+  </section>
+
+  <section class="services bg-dark">
+    <div class="container">
+      <h2 class="section-heading">Our Services</h2>
+      <div class="services-flex">
+        <div class="service-item">
+          <h4>Photography</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+            illum eius laboriosam delectus omnis veniam aspernatur pariatur
+            magnam labore dolor.
+          </p>
+        </div>
+        <div class="service-item">
+          <h4>Web Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+            illum eius laboriosam delectus omnis veniam aspernatur pariatur
+            magnam labore dolor.
+          </p>
+        </div>
+        <div class="service-item">
+          <h4>Graphic Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+            illum eius laboriosam delectus omnis veniam aspernatur pariatur
+            magnam labore dolor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container container-lg">
+      <h2 class="section-heading">Our Team</h2>
+      <div class="team-flex">
+        <div class="team-item">
+          <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Team Member" />
+          <h4>Kevin Samson</h4>
+          <p>Founder</p>
+        </div>
+        <div class="team-item">
+          <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Team Member" />
+          <h4>Rebecca Williams</h4>
+          <p>Designer</p>
+        </div>
+        <div class="team-item">
+          <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Team Member" />
+          <h4>Ben Markson</h4>
+          <p>Designer/Developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    {% include 'partials/footer.html' %}
+
+  </footer>
+</body>
+</html>
